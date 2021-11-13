@@ -1,0 +1,63 @@
+<aside>
+  <div class="w-64px h-screen bg-navbar pt-6 flex flex-col">
+    <div class="flex items-center justify-center mb-3">
+      <svg class="w-8 h-8 text-textLogo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient x1="108.695%" x2="12.439%" y1="-14.936%" y2="45.215%" id="uid11-1">
+            <stop stop-color="#DEEBFF" stop-opacity="0.4" offset="0%"></stop>
+            <stop stop-color="#DEEBFF" offset="100%"></stop>
+          </linearGradient>
+          <linearGradient x1="0%" x2="91.029%" y1="118.55%" y2="63.971%" id="uid11-2">
+            <stop stop-color="#DEEBFF" stop-opacity="0.4" offset="0%"></stop>
+            <stop stop-color="#DEEBFF" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g>
+          <path
+            d="M15.967 29.362a6.675 6.675 0 0 0 0-9.442l-8.699-8.671-3.957 3.957a1.062 1.062 0 0 0 0 1.5l12.656 12.656zm12.656-14.156L15.967 2.55l-.039.039a6.675 6.675 0 0 0 .028 9.41l8.706 8.667 3.96-3.96a1.062 1.062 0 0 0 0-1.5z"
+            fill="currentColor"></path>
+          <path d="M15.967 11.992a6.675 6.675 0 0 1-.028-9.41L6.91 11.606l4.72 4.721 4.336-4.335z" fill="url(#uid11-1">
+          </path>
+          <path d="M20.295 15.591l-4.328 4.329a6.675 6.675 0 0 1 0 9.442l9.05-9.05-4.722-4.72z" fill="url(#uid11-2">
+          </path>
+        </g>
+      </svg>
+    </div>
+    <ng-container *ngFor="let item of items">
+      <div class="flex justify-center items-center py-2">
+        <i nz-icon [nzType]="item.icon.name" [nzTheme]="'outline'"
+          class="text-white text-xl hover:bg-light-blue w-8 h-8 rounded-full" nz-tooltip
+          [nzTooltipTitle]="item.tooltip"></i>
+      </div>
+    </ng-container>
+    <div class="flex-auto"></div>
+    <div class="flex items-center justify-center">
+      <div class="w-8 h-8 flex items-center justify-center hover:bg-light-blue rounded-full">
+        <nz-avatar nzIcon="user" nz-tooltip nzTooltipTitle="Tu Nguyen" nzSize="small"
+          nzSrc="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/133961718_1012231882519368_8549773607698345118_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=SLOyUbS91CAAX9IMMU3&tn=LyPV8EyIAc0mhVbu&_nc_ht=scontent.fhan14-2.fna&oh=309f0ef0cec8d9fa890acbbe7dfffeab&oe=61B6BAF7">
+        </nz-avatar>
+      </div>
+    </div>
+    <div class="flex justify-center items-center py-2 mt-1 mb-4">
+      <div nz-popover nzPopoverPlacement="rightBottom" [nzPopoverContent]="popup" nzPopoverTrigger="click">
+        <i nz-icon nzType="question-circle" nzTheme="fill" nzTooltipPlacement="right"
+          class="text-white text-xl hover:bg-light-blue w-8 h-8 rounded-full" nz-tooltip [nzTooltipTitle]="'About'"></i>
+      </div>
+
+    </div>
+    <div>
+    </div>
+  </div>
+</aside>
+<ng-template #popup>
+  <div class="" style="max-width:270px">
+    <p class="mb-2">This project was build with Angular, Akita, ng-zozo</p>
+    <p class="mb-2">Author by Tu Nguyen</p>
+    <p class="mb-3">Contact me
+      <a class="font-semibold" href="email:vantu1998@gmail.com">vantu1998@gmail.com</a>
+    </p>
+    <button nz-button nzType="primary">
+      Visit profile
+    </button>
+  </div>
+</ng-template>
