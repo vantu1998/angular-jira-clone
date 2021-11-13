@@ -1,5 +1,5 @@
 <aside>
-  <div class="w-64px h-screen bg-navbar pt-6">
+  <div class="w-64px h-screen bg-navbar pt-6 flex flex-col">
     <div class="flex items-center justify-center mb-3">
       <svg class="w-8 h-8 text-textLogo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
@@ -24,9 +24,40 @@
       </svg>
     </div>
     <ng-container *ngFor="let item of items">
-      <div class="flex justify-center items-center py-2" >
-          <i nz-icon [nzType]="item.icon.name" [nzTheme]="'outline'"  class="text-white text-xl hover:bg-light-blue w-8 h-8 rounded-full"  nz-tooltip [nzTooltipTitle]="item.tooltip"></i>
+      <div class="flex justify-center items-center py-2">
+        <i nz-icon [nzType]="item.icon.name" [nzTheme]="'outline'"
+          class="text-white text-xl hover:bg-light-blue w-8 h-8 rounded-full" nz-tooltip
+          [nzTooltipTitle]="item.tooltip"></i>
       </div>
     </ng-container>
+    <div class="flex-auto"></div>
+    <div class="flex items-center justify-center">
+      <div class="w-8 h-8 flex items-center justify-center hover:bg-light-blue rounded-full">
+        <nz-avatar nzIcon="user" nz-tooltip nzTooltipTitle="Tu Nguyen" nzSize="small"
+          nzSrc="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/133961718_1012231882519368_8549773607698345118_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=SLOyUbS91CAAX9IMMU3&tn=LyPV8EyIAc0mhVbu&_nc_ht=scontent.fhan14-2.fna&oh=309f0ef0cec8d9fa890acbbe7dfffeab&oe=61B6BAF7">
+        </nz-avatar>
+      </div>
+    </div>
+    <div class="flex justify-center items-center py-2 mt-1 mb-4">
+      <div nz-popover nzPopoverPlacement="rightBottom" [nzPopoverContent]="popup" nzPopoverTrigger="click">
+        <i nz-icon nzType="question-circle" nzTheme="fill" nzTooltipPlacement="right"
+          class="text-white text-xl hover:bg-light-blue w-8 h-8 rounded-full" nz-tooltip [nzTooltipTitle]="'About'"></i>
+      </div>
+
+    </div>
+    <div>
+    </div>
   </div>
 </aside>
+<ng-template #popup>
+  <div class="" style="max-width:270px">
+    <p class="mb-2">This project was build with Angular, Akita, ng-zozo</p>
+    <p class="mb-2">Author by Tu Nguyen</p>
+    <p class="mb-3">Contact me
+      <a class="font-semibold" href="email:vantu1998@gmail.com">vantu1998@gmail.com</a>
+    </p>
+    <button nz-button nzType="primary">
+      Visit profile
+    </button>
+  </div>
+</ng-template>

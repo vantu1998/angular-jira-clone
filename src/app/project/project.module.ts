@@ -6,10 +6,13 @@ import { NavbarLeftComponent } from './components/navigation/navbar-left/navbar-
 import { ResizerComponent } from './components/navigation/resizer/resizer.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
-import {SearchOutline, PlusOutline} from '@ant-design/icons-angular/icons';
+import {SearchOutline, PlusOutline, QuestionCircleFill} from '@ant-design/icons-angular/icons';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
-const icons: IconDefinition[] = [SearchOutline, PlusOutline];
+const icons: IconDefinition[] = [SearchOutline, PlusOutline, QuestionCircleFill];
 @NgModule({
   declarations: [
     NavigationComponent,
@@ -20,7 +23,10 @@ const icons: IconDefinition[] = [SearchOutline, PlusOutline];
   imports: [
     CommonModule,
     NzIconModule.forChild(icons),
-    NzToolTipModule
+    NzToolTipModule,
+    NzAvatarModule,
+    NzPopoverModule,
+    NzButtonModule
   ],
   exports: [
     NavigationComponent,
