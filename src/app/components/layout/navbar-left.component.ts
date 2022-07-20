@@ -5,7 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {RouterModule} from '@angular/router';
 
 @Component({
-  selector: `ct-navbar-left`,
+  selector: `app-navbar-left`,
   template: `
     <div class="w-[64px] bg-[#0747a6] h-screen flex items-center py-8 flex-col color-white">
       <div class="py-4 cursor-pointer" routerLink="/">
