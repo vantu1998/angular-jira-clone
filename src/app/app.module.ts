@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {StoreModule} from '@ngrx/store';
 import {layoutReducer} from './components/layout/store/layout.reducer';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,11 @@ import {layoutReducer} from './components/layout/store/layout.reducer';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    StoreModule.forRoot({layoutState: layoutReducer})
+    StoreModule.forRoot({layoutState: layoutReducer}),
+    StoreDevtoolsModule.instrument({
+      name: 'NgRx Demo App',
+      logOnly: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
